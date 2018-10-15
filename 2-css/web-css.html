@@ -37,11 +37,29 @@
         }
         body{
             background-color: burlywood;
-            margin:0;
-            padding:0;
+  
                 
         }
-        
+        #red_sq{
+            background-color: red;
+        }
+        #blue_sq{
+            background-color: blue;
+            border: black;
+            border-style:solid ridge dotted double;
+            border-width: 2px 5px 3px 1px;
+        }
+        #green_sq{
+            background-color: green;
+            border: 3px black solid;
+            border-radius: 50%;
+        }
+        .sq{
+            width:100px;
+            height: 100px;
+            margin:40px;
+            float:left;
+        }
     </style>
 
 </head>
@@ -58,7 +76,9 @@
     </div>
 <!---    <div class="clear_f"></div> --->
     <div class="third"><h1>Title3</h1></div>
-    
+    <div id="red_sq" class="sq"></div>
+    <div id="blue_sq" class="sq"></div>
+    <div id="green_sq" class="sq"></div>
 
 
 
