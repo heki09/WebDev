@@ -8,10 +8,14 @@
 </head>
 <body>
     <p id="text1">Hello world!</p>
+    <button id="myButton">change</button>
     <script type="text/javascript">
-        //コンテンツ変更
-         document.getElementById("text1").innerHTML="HELLO javascript";
-        </script>
+        document.getElementById("myButton").onclick=function(){
+         //   alert("OK");
+            document.getElementById("text1").innerHTML="Change in my World"
+        };
+        
+    </script>
     <hr>
     <button onclick="alert('Hi')">Click here
     </button>
