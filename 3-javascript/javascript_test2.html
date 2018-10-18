@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javascript-test2</title>
+    <link rel="stylesheet" href="style.css">
+    <style type="text/css">
+    </style>
+
+</head>
+<body>
+    <script type="text/javascript" src="script.js">
+    </script>
+    <hr>
+    <div id="sem_mem"></div>
+    
+    <script type="text/javascript">
+        var sem=["hazama","maita","yamashita"]
+        var sem_men="";
+        for(var i=0;i<sem.length;i++){
+            sem_men+=sem[i]+"<br>";
+        }
+        
+        document.getElementById("sem_mem").innerHTML=sem_men;
+        var i=0
+        while(i<sem.length){
+            sem_men+=sem[i]+" "+(i+1)+"<br>";
+            i++;
+        }
+        document.getElementById("sem_mem").innerHTML=sem_men;
+    </script>
+    
+    
+    <hr>
+    <p >password</p>
+    <p><input type="text" id="pass"></p>
+    <p><button id="check">submit</button></p>
+    <script type="text/javascript">
+        document.getElementById("check").onclick=function(){
+                 var pass=document.getElementById("pass").value;
+            if(pass=="abc"){
+                alert("OK");
+            }else{
+                alert("NG");
+            }
+   
+        }
+        /*
+        var i=2;
+        if(i==1){
+            alert("i=1");
+        }else{
+            alert("i<>1;This is "+i);
+        }
+        */
+        /*---
+        var arr=new Array();
+        
+        arr[0]="tendo";
+        arr[1]="sakuraba";
+        arr[2]="kasiwagi";
+        //alert(arr[2]);
+        alert(arr.length);
+        console.log(arr);
+        
+        var twt=["01","02","03"];
+        //alert(twt(0));
+        twt.push("04");
+        console.log(twt);
+        twt.splice(1,0,"05");
+        console.log(twt);
+        ---*/
+    </script>
+    <hr>
+    <p><input type="text" id="box">テキスト入力</p>
+    <button  id="sub-button">submit</button>
+    <p id="message"></p>
+        <script type="text/javascript">
+        document.getElementById("sub-button").onclick=function(){
+            var name=document.getElementById("box").value;
+            //alert(name);
+            document.getElementById("message").innerHTML=name+"様";
+        }
+            
+        
+    
+    </script>
+    
+
+
+
+</body>
+</html>
