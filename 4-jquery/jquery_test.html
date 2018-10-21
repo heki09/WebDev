@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>jquery_test</title>
+    <style type="text/css">
+        .gre_cir{
+            width:150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: green;
+            margin:50px;
+            float: left;
+        }
+        .red_req{
+            width:150px;
+            height: 150px;
+            background-color: red;
+            margin:50px;
+            float:left;
+        }
+    
+    
+    
+    </style>
+</head>
+<body>
+    <!---
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+    
+        
+    
+    
+    </script>
+--->
+     <div class="gre_cir"></div>
+    <div class="red_req"></div>
+    <div class="red_req"></div>
+    
+    
+    <script src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript">
+ //   if(typeof jQuery=="undefined"){
+//        alert("NO jquery");
+//    }else{
+//        alert("OK");
+//    }
+    /*
+    $(".gre_cir").click(function(){
+        alert("click_circle")         ;       
+                        })
+    $(".red_req").click(function(){
+        alert("click_reqtangle")         ;       
+                        })
+    */
+     $("div").click(function(){
+        alert("click_div")         ;       
+                        })
+   
+    </script>
+ 
+    
+    
+</body>
+
+</html>
