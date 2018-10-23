@@ -10,16 +10,16 @@
             border-radius: 50%;
             background-color: green;
             margin:50px;
-            float: left;
+          
         }
-/*---        .red_req{
+       .red_req{
             width:150px;
             height: 150px;
             background-color: red;
             margin:50px;
-            float:left;
+            
         }
- ---*/   
+  
         iframe{
             width:300px;
             height:200px;
@@ -39,19 +39,24 @@
      <div class="gre_cir"></div>
     <div class="red_req"></div>
     <div class="red_req"></div>
-    <p>
-    文章でるよ
+   
     
-    </p>
-    <iframe src="http://www.google.com/"></iframe>
+    
     <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
 
-     $("div").hover(function(){
-//        $("p").html("Click!")    
-//         alert($("p").html());
-         $("iframe").attr("src","http://www.amazon.co.jp/ref=gno_logo");
-                        })
+        $("div").click(function(){
+/*         $(".gre_cir").css("width","300px");
+         $(".gre_cir").css("height","300px");
+         $(".gre_cir").css("background-color","red");
+         alert("OK");
+
+            alert($(".gre_cir").css("width"));
+            alert($(".gre_cir").css("background-color"));
+*/
+
+            $(this).css("display","none");
+        })
    
     </script>
     
