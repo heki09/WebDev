@@ -50,27 +50,21 @@
     
     </script>
 --->
-     <div class="gre_cir"></div>
-    <div class="red_req"></div>
-    <div class="red_req"></div>
-   
+     
+
     
-    
+    <div class="gre_cir"></div>
+
     <script src="jquery-3.3.1.min.js"></script>
 <script type="text/javascript">
-
-        $("div").click(function(){
-/*         $(".gre_cir").css("width","300px");
-         $(".gre_cir").css("height","300px");
-         $(".gre_cir").css("background-color","red");
-         alert("OK");
-
-            alert($(".gre_cir").css("width"));
-            alert($(".gre_cir").css("background-color"));
-*/
-
-            $(this).fadeOut("slow");
-        })
+    $("gre_cir").click(function(){
+    $("gre_cir").animate({width:"400px",height:"400px",marginLeft:"100px"},2000,
+                        function(){
+        $("gre_cir").css("background-color","red");
+    });
+    
+    })
+   
    
     </script>
     
