@@ -28,6 +28,20 @@
     </style>
 </head>
 <body>
+    
+    <p>test_sample</p>
+    <button>テスト</button>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript">
+    $("button").click(function(){
+        if($("p").css("display")=="none"){
+        $("p").fadeIn();
+    }else{
+    $("p").fadeOut();
+    }
+ 
+    
+    })   </script>
     <!---
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
     
@@ -55,7 +69,7 @@
             alert($(".gre_cir").css("background-color"));
 */
 
-            $(this).css("display","none");
+            $(this).fadeOut("slow");
         })
    
     </script>
