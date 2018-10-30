@@ -4,72 +4,29 @@
 
     <title>jquery_test</title>
     <style type="text/css">
-        .gre_cir{
-            width:150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: green;
-            margin:50px;
-          
-        }
-       .red_req{
-            width:150px;
-            height: 150px;
-            background-color: red;
-            margin:50px;
-            
-        }
-  
-        iframe{
-            width:300px;
-            height:200px;
-        }
-    
+   
     </style>
 </head>
 <body>
     
-    <p>test_sample</p>
-    <button>テスト</button>
-    <script src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript">
-    $("button").click(function(){
-        if($("p").css("display")=="none"){
-        $("p").fadeIn();
-    }else{
-    $("p").fadeOut();
-    }
  
-    
-    })   </script>
-    <!---
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
-    
-        
+    <script src="jquery-3.3.1.min.js"></script>
     
     
-    </script>
---->
+    
+    
+    
+    <script type="text/javascript">
+        var rejex = /Is/i;
+        var str = "YEAH is";
+        var result = str.match(rejex);
+        alert(result);
+     </script>
+
      
 
     
-    <div class="gre_cir"></div>
-
-    <script src="jquery-3.3.1.min.js"></script>
-<script type="text/javascript">
-    $("gre_cir").click(function(){
-    $("gre_cir").animate({width:"400px",height:"400px",marginLeft:"100px"},2000,
-                        function(){
-        $("gre_cir").css("background-color","red");
-    });
-    
-    })
    
-   
-    </script>
-    
- 
-    
     
 </body>
 
