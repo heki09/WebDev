@@ -1,65 +1,94 @@
 <!DOCTYPE html>
 <html>
+
 <head>
 
     <title>jquery_test</title>
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <style type="text/css">
-        #big_div{
-            width :500px;
-            height : 500px;
+        #droppable {
+            width: 500px;
+            height: 500px;
             background-color: aquamarine;
-            margin:10px;
+            margin: 10px;
             padding: 10px;
         }
-        #draggable{
-            width:200px;
-            height:100px;
+
+        #draggable {
+            width: 200px;
+            height: 100px;
             background-color: orange;
         }
-   #resizable { width: 150px; height: 150px; padding: 0.5em; }
-        #also { width: 150px; height: 150px; padding: 0.5em; background-color: black;}
-  #resizable h3 { text-align: center; margin: 0; }
+
+        #resizable {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+        }
+
+        #also {
+            width: 150px;
+            height: 150px;
+            padding: 0.5em;
+            background-color: black;
+        }
+
+        #resizable h3 {
+            text-align: center;
+            margin: 0;
+        }
+
     </style>
 </head>
-<body>
-    
- 
-    <script src="jquery-3.3.1.min.js"></script>
-     <script src="jquery-ui/jquery-ui.js"></script>
-    
-    
-    
-    
-    
-    <script type="text/javascript">     </script>
 
-        <script>
-  $( function() {
-    //$( "#draggable" ).draggable({ axis: "y" });
-    $( "#draggable" ).draggable({ containment: "parent" });
-      $( "#resizable" ).resizable({
-      alsoResize: "#also"
-    });    
-  } );
-            
-            
-         
-  </script>
-    <div id="big_div">
+<body>
+
+
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="jquery-ui/jquery-ui.js"></script>
+
+
+
+
+
+
+
+    <script type="text/javascript"> </script>
+
+    <script>
+        $(function() {
+            //$( "#draggable" ).draggable({ axis: "y" });
+            $("#draggable").draggable();
+            $("#droppable").droppable({
+                drop: function(event, ui) {
+                    $(this)
+                        .addClass("ui-state-highlight")
+                        .find("p")
+                        .html("Dropped!");
+                }
+            });
+            $("#resizable").resizable({
+                alsoResize: "#also"
+            });
+        });
+
+    </script>
     <div id="draggable" class="draggable ui-widget-content">
-  <p>I can be dragged </p>
-</div>
-</div>
-     
-<div id="resizable" class="ui-widget-content">
-  <h3 class="ui-widget-header">Resizable</h3>
-</div>
-    <div id="also" class="ui-widget-content">
-  <h3 class="ui-widget-header">will also resize</h3>
+        <p>I can be dragged </p>
     </div>
-   
-    
+    <div id="droppable" class="ui-widget-header">
+        <p>Drop here</p>
+    </div>
+
+
+    <div id="resizable" class="ui-widget-content">
+        <h3 class="ui-widget-header">Resizable</h3>
+    </div>
+    <div id="also" class="ui-widget-content">
+        <h3 class="ui-widget-header">will also resize</h3>
+    </div>
+
+
 </body>
 
 </html>
