@@ -3,7 +3,13 @@
 <head>
 
     <title>jquery_test</title>
+    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <style type="text/css">
+        #draggable{
+            width:"200px";
+            height:"100px";
+            background-color: orange;
+        }
    
     </style>
 </head>
@@ -11,17 +17,25 @@
     
  
     <script src="jquery-3.3.1.min.js"></script>
+     <script src="jquery-ui/jquery-ui.js"></script>
     
     
     
     
     
     <script type="text/javascript">
+        $( function() {
+    $( "#draggable" ).draggable();
+  } );
         var rejex = /Is/i;
         var str = "YEAH is";
         var result = str.match(rejex);
         alert(result);
      </script>
+    
+    <div id="draggable" class="ui-widget-content">
+  <p>Drag me around</p>
+</div>
 
      
 
