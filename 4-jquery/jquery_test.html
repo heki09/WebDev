@@ -5,9 +5,16 @@
     <title>jquery_test</title>
     <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
     <style type="text/css">
+        #big_div{
+            width :500px;
+            height : 500px;
+            background-color: aquamarine;
+            margin:10px;
+            padding: 10px;
+        }
         #draggable{
-            width:"200px";
-            height:"100px";
+            width:200px;
+            height:100px;
             background-color: orange;
         }
    
@@ -23,20 +30,19 @@
     
     
     
-    <script type="text/javascript">
-        $( function() {
-    $( "#draggable" ).draggable();
-  } );
-        var rejex = /Is/i;
-        var str = "YEAH is";
-        var result = str.match(rejex);
-        alert(result);
-     </script>
-    
-    <div id="draggable" class="ui-widget-content">
-  <p>Drag me around</p>
-</div>
+    <script type="text/javascript">     </script>
 
+        <script>
+  $( function() {
+    //$( "#draggable" ).draggable({ axis: "y" });
+    $( "#draggable" ).draggable({ containment: "parent" });
+  } );
+  </script>
+    <div id="big_div">
+    <div id="draggable" class="draggable ui-widget-content">
+  <p>I can be dragged </p>
+</div>
+</div>
      
 
     
